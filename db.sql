@@ -1,8 +1,3 @@
-static
-templates
-pip install flask
-pip install flask_mysqldb
-
 
 create database emp;
 use emp;
