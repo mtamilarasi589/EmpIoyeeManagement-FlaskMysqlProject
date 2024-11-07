@@ -22,7 +22,7 @@
     <form action="{{ url_for('search')}}" method="POST">
       <div class="form-group">
 
-        <input type="text" name="empid" class="form-control" id="exampleFormControlInput1" placeholder="Enter Employee ID">
+        <input type="text" name="empid" class="form-control" id="searchFormEmpid" placeholder="Enter Employee ID">
       </div>
       <button type="submit" class="btn btn-primary mb-2">Search</button>
                          
@@ -46,21 +46,21 @@
                         <form action="{{ url_for('insert')}}" method="POST">
                           <div class="form-group">
                             <label>Employee ID</label>
-                            <input type="text" name="empid" class="form-control" id="exampleFormControlInput1" placeholder="Enter Employee ID">
+                            <input type="text" name="empid" class="form-control" id="insertFormEmpid" placeholder="Enter Employee ID">
                           </div>
                             <div class="form-group">
                               <label>Full Name</label>
-                              <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter Full Name">
+                              <input type="text" name="name" class="form-control" id="insertFormName" placeholder="Enter Full Name">
                             </div>
     
                             <div class="form-group">
                                 <label>Email</label>
-                                <input type="text" name="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email">
+                                <input type="text" name="email" class="form-control" id="insertFormEmail" placeholder="Enter Email">
                             </div>
     
                             <div class="form-group">
                                 <label>Department</label>
-                                <input name="dept" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Department">
+                                <input name="dept" type="text" class="form-control" id="insertFormDept" placeholder="Enter Department">
                               </div>
     
                               <button type="submit" class="btn btn-primary mb-2">Save</button>
@@ -121,21 +121,21 @@
                         <div class="modal-body">
                             
                             <form action="{{url_for('update')}}" method="POST">
-                              <input type="hidden" name="empid" class="form-control" id="updateEmpModal" value="{{row.0}}">
+                              <input type="hidden" name="empid" class="form-control" id="updateFormEmpid" value="{{row.0}}">
       
                                 <div class="form-group">
                                   <label>Full Name</label>
-                                  <input value="{{row.1}}" type="text" name="name" class="form-control" id="updateEmpModal" placeholder="Enter Full Name">
+                                  <input value="{{row.1}}" type="text" name="name" class="form-control" id="updateFormName" placeholder="Enter Full Name">
                                 </div>
         
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <input value="{{row.2}}" type="text" name="email" class="form-control" id="updateEmpModal" placeholder="Enter Email">
+                                    <input value="{{row.2}}" type="text" name="email" class="form-control" id="updateFormEmail" placeholder="Enter Email">
                                 </div>
         
                                 <div class="form-group">
                                     <label>Department</label>
-                                    <input value="{{row.3}}" name="dept" type="text" class="form-control" id="updateEmpModal" placeholder="Enter Department">
+                                    <input value="{{row.3}}" name="dept" type="text" class="form-control" id="updateFormDept" placeholder="Enter Department">
                                   </div>
         
                                   <button type="submit" class="btn btn-success mb-2">Update</button>
