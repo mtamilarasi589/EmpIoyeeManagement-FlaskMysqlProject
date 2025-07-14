@@ -12,7 +12,7 @@ mysql=MySQL(app)
 
 @app.route('/')
 def index():
-    return render_template('index.htm')
+    return render_template('index.html')
 
 @app.route('/employee')
 def employee():
@@ -20,7 +20,7 @@ def employee():
     cur.execute("SELECT * FROM empdetails")
     empinfo = cur.fetchall()
     cur.close()
-    return render_template('employee.htm',employees=empinfo)
+    return render_template('employee.html',employees=empinfo)
 
 @app.route('/search',methods= ['POST', 'GET'])
 def search():
@@ -33,7 +33,7 @@ def search():
         cur.execute(query, ('%' + search_term + '%',))
         search_results=cur.fetchmany(size=1)
         cur.close()
-        return render_template('employee.htm',employees=search_results)
+        return render_template('employee.html',employees=search_results)
 
 @app.route('/insert', methods = ['POST'])
 def insert():
