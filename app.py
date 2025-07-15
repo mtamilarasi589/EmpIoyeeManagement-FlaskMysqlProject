@@ -7,7 +7,7 @@ app.secret_key='tamil'
 app.config['MYSQL_HOST']='database-1.ce3goq6c4v62.us-east-1.rds.amazonaws.com'
 app.config['MYSQL_USER']='admin'
 app.config['MYSQL_PASSWORD']='root1234'
-app.config['MYSQL_DB']='emp'
+app.config['MYSQL_DB']='mydb'
 mysql=MySQL(app)
 
 @app.route('/')
